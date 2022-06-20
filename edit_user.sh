@@ -32,7 +32,14 @@ while read line; do
 
     if [ $(wc -w <<< "$line") -eq 3 ] 
     then
-        echo "valid record"
+        name=$(echo "$line" | awk '{print $1}')
+        email=$(echo "$line" | awk '{print $2}')
+        id=$(echo "$line" | awk '{print $3}')
+        if []
+        
+        then
+
+        fi
     fi
 
 done < $file
