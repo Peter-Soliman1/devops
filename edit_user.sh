@@ -7,25 +7,8 @@ echo "John john@domain.com 325
 Susan 510
 Jane jane@domain.com 131 
 Karl karl@domain.com 
-Bert bert@localhost 150" > $file
-#LINES=$(cat $file)
-
-#number_of_lines=$(wc -l < $file)
-
-#line_counter=1
-
-#IFS=' '
-
-#while  read -r CURRENT_LINE
-#	do
-#       while $line_counter <= number_of_lines
-#        word_counter=$(wc -w <<< line_counter)
-#          do
-#           echo $word_counter
-#          ((word_counter++))
-#    ((line_counter++))
-#       done
-#done < $file
+Bert bert@localhost 150
+" > $file
 
 IFS=$'\n'
 while read line; do
@@ -37,11 +20,11 @@ while read line; do
         id=$(echo "$line" | awk '{print $3}')
         if [[ $email == *"@domain.com"* ]]
         then
-            if [ $(id%2) -eq 0]
+            if [[ $id%2 -eq 0 ]]
             then
-                echo " $ID of $EMAIL is even number"
+                echo " $id of $email is even number"
             else
-                echo " $ID of $EMAIL is odd number"
+                echo " $id of $email is odd number"
             fi
         fi
     fi
