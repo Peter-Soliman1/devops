@@ -35,10 +35,14 @@ while read line; do
         name=$(echo "$line" | awk '{print $1}')
         email=$(echo "$line" | awk '{print $2}')
         id=$(echo "$line" | awk '{print $3}')
-        if []
-        
+        if [[ $email == *"@domain.com"* ]]
         then
-
+            if [ $(id%2) -eq 0]
+            then
+                echo " $ID of $EMAIL is even number"
+            else
+                echo " $ID of $EMAIL is odd number"
+            fi
         fi
     fi
 
