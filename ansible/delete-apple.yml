@@ -1,0 +1,15 @@
+---
+
+ - name: "restart nginx , ssh and ntp" 
+   hosts: localhost
+   gather_facts: True
+
+   tasks:
+
+    - name: Remove a line from the file
+      lineinfile:
+        path: applesdv.txt
+        state: absent
+        regexp: 'apple'
+
+        

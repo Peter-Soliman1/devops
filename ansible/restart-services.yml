@@ -1,0 +1,31 @@
+---
+
+- name: "restart nginx , ssh and ntp" 
+  hosts: all
+  user: ubuntu
+  become: true
+  become_method: sudo
+  
+  tasks:
+
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+    
+    - name: restart ntp
+      service:
+        name: ntp
+        state: restarted
+
+    - name: restart ssh
+      service:
+        name: ssh
+        state: restarted
+
+    - name: remove all lines that start with "Apple"
+      lineinfile:
+        path: /home/ubuntu/apple.txt
+        state: absent
+        regexp: '^Apple(.*)$'      
+
