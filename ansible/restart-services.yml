@@ -6,26 +6,10 @@
   become: true
   become_method: sudo
   
-  tasks:
+  roles:
 
-    - name: restart nginx
-      service:
-        name: nginx
-        state: restarted
+    - restart
+    - apple
     
-    - name: restart ntp
-      service:
-        name: ntp
-        state: restarted
-
-    - name: restart ssh
-      service:
-        name: ssh
-        state: restarted
-
-    - name: remove all lines that start with "Apple"
-      lineinfile:
-        path: /home/ubuntu/apple.txt
-        state: absent
-        regexp: '^Apple(.*)$'      
+          
 

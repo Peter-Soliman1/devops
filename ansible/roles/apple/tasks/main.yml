@@ -1,0 +1,7 @@
+---
+
+    - name: remove all lines that start with "Apple"
+      lineinfile:
+        path: /home/ubuntu/apple.txt
+        state: absent
+        regexp: '^Apple(.*)$'
