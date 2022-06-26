@@ -1,6 +1,6 @@
 ---
 
-- name: "restart nginx , ssh and ntp" 
+- name: "edit apple.txt and restart services" 
   hosts: all
   user: ubuntu
   become: true
