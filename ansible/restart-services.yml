@@ -1,7 +1,7 @@
 ---
 
 - name: "edit apple.txt and restart services" 
-  hosts: all
+  hosts: servers
   user: ubuntu
   become: true
   become_method: sudo
