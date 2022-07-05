@@ -9,9 +9,10 @@ Susan 510
 Jane jane@domain.com 131
 Karl karl@domain.com
 Bert bert@localhost 150
+jhf uyfkjf@kygk.com 890
+peter peter@jhf.com 8878
 " > $file
 
-IFS=$'\n'
 while read line; do
 
 #if condition to check that three records to be checked have all required details (name , email and ID)
